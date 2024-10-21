@@ -11,7 +11,8 @@ import List from '@mui/material/List';
 import MuiDrawer from '@mui/material/Drawer';
 import { Avatar, styled, Typography, useTheme } from '@mui/material';
 import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, HomeOutlined, MapOutlined, PeopleOutlined, PersonOutlined, PieChartOutlineOutlined, ReceiptOutlined, TimelineOutlined } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { grey } from '@mui/material/colors';
 
 
 
@@ -112,6 +113,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 
 const SideBar = ({open, handleDrawerClose}) => {
+    let location = useLocation();
     const navigate = useNavigate();
     const theme = useTheme();
   return (
@@ -165,6 +167,7 @@ const SideBar = ({open, handleDrawerClose}) => {
               {
                 minHeight: 48,
                 px: 2.5,
+                bgcolor: location.pathname === item.path  ? theme.palette.mode === "dark" ? grey[800] : grey[300] : null
               },
               open
                 ? {
