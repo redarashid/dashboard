@@ -10,12 +10,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from './App';
+import Dashboard from './page/dashboard/Dashboard';
+import Team from './page/team/Team';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      {/* <Route path="dashboard" element={<Dashboard />} /> */}
-      {/* ... etc. */}
+      
+      <Route index element={<Dashboard/>} />
+      <Route path='team' element={<Team/>} />
+
+
     </Route>
   )
 );

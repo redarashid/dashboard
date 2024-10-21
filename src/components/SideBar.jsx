@@ -11,6 +11,7 @@ import List from '@mui/material/List';
 import MuiDrawer from '@mui/material/Drawer';
 import { Avatar, styled, Typography, useTheme } from '@mui/material';
 import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, HomeOutlined, MapOutlined, PeopleOutlined, PersonOutlined, PieChartOutlineOutlined, ReceiptOutlined, TimelineOutlined } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -111,6 +112,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 
 const SideBar = ({open, handleDrawerClose}) => {
+    const navigate = useNavigate();
     const theme = useTheme();
   return (
     <Drawer variant="permanent" open={open}>
@@ -120,6 +122,7 @@ const SideBar = ({open, handleDrawerClose}) => {
       </IconButton>
     </DrawerHeader>
 
+    <Divider />
 
     <Avatar sx={{
           mx: "auto",
@@ -155,6 +158,9 @@ const SideBar = ({open, handleDrawerClose}) => {
       {Array1.map((item) => (
         <ListItem key={item.path} disablePadding sx={{ display: 'block' }}>
           <ListItemButton
+            onClick={()=> {
+              navigate(item.path)
+            }}
             sx={[
               {
                 minHeight: 48,
@@ -211,6 +217,9 @@ const SideBar = ({open, handleDrawerClose}) => {
       {Array2.map((item) => (
         <ListItem key={item.path} disablePadding sx={{ display: 'block' }}>
           <ListItemButton
+            onClick={()=> {
+              navigate(item.path)
+            }}
             sx={[
               {
                 minHeight: 48,
@@ -267,6 +276,9 @@ const SideBar = ({open, handleDrawerClose}) => {
       {Array3.map((item) => (
         <ListItem key={item.path} disablePadding sx={{ display: 'block' }}>
           <ListItemButton
+            onClick={()=> {
+              navigate(item.path)
+            }}
             sx={[
               {
                 minHeight: 48,
