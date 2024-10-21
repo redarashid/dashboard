@@ -7,11 +7,10 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import List from '@mui/material/List';
 import MuiDrawer from '@mui/material/Drawer';
-import { styled, useTheme } from '@mui/material';
+import { Avatar, styled, Typography, useTheme } from '@mui/material';
+import { BarChartOutlined, CalendarTodayOutlined, ContactsOutlined, HelpOutlineOutlined, HomeOutlined, MapOutlined, PeopleOutlined, PersonOutlined, PieChartOutlineOutlined, ReceiptOutlined, TimelineOutlined } from '@mui/icons-material';
 
 
 
@@ -73,6 +72,44 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
     ...theme.mixins.toolbar,
   }));
 
+
+
+  const Array1 = [
+    { text: "Dashboard", icon: <HomeOutlined />, path: "/" },
+    { text: "Manage Team", icon: <PeopleOutlined />, path: "/team" },
+    {
+      text: "Contacts Information",
+      icon: <ContactsOutlined />,
+      path: "/contacts",
+    },
+    {
+      text: "Invoices Balances",
+      icon: <ReceiptOutlined />,
+      path: "/invoices",
+    },
+  ];
+  
+  const Array2 = [
+    { text: "Profile Form", icon: <PersonOutlined />, path: "/form" },
+    { text: "Calendar", icon: <CalendarTodayOutlined />, path: "/calendar" },
+    {
+      text: "FAQ Page",
+      icon: <HelpOutlineOutlined />,
+      path: "/faq",
+    },
+  ];
+  
+  const Array3 = [
+    { text: "Bar Chart", icon: <BarChartOutlined />, path: "/bar" },
+    { text: "Pie Chart", icon: <PieChartOutlineOutlined />, path: "/pie" },
+    { text: "Line Chart", icon: <TimelineOutlined />, path: "/line" },
+    { text: "Geography Chart", icon: <MapOutlined />, path: "/geography" },
+  ];
+
+
+
+
+
 const SideBar = ({open, handleDrawerClose}) => {
     const theme = useTheme();
   return (
@@ -82,10 +119,41 @@ const SideBar = ({open, handleDrawerClose}) => {
         {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
       </IconButton>
     </DrawerHeader>
+
+
+    <Avatar sx={{
+          mx: "auto",
+          width: open ? 88 : 44,
+          height: open ? 88 : 44,
+          my: 1,
+          border: "2px solid grey",
+          transition: "0.25s",
+        }} 
+        alt="Remy Sharp" src="./logo.png" />
+
+    <Typography
+        align="center"
+        sx={{ fontSize: open ? 17 : 0, transition: "0.25s" }}
+      >
+        Rashid Reda
+      </Typography>
+      <Typography
+        align="center"
+        sx={{
+          fontSize: open ? 15 : 0,
+          transition: "0.25s",
+          color: theme.palette.info.main,
+        }}
+      >
+        Admin
+    </Typography>
+
     <Divider />
+
+
     <List>
-      {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-        <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+      {Array1.map((item) => (
+        <ListItem key={item.path} disablePadding sx={{ display: 'block' }}>
           <ListItemButton
             sx={[
               {
@@ -116,10 +184,10 @@ const SideBar = ({open, handleDrawerClose}) => {
                     },
               ]}
             >
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {item.icon}
             </ListItemIcon>
             <ListItemText
-              primary={text}
+              primary={item.text}
               sx={[
                 open
                   ? {
@@ -134,10 +202,14 @@ const SideBar = ({open, handleDrawerClose}) => {
         </ListItem>
       ))}
     </List>
+
+
     <Divider />
+
+
     <List>
-      {['All mail', 'Trash', 'Spam'].map((text, index) => (
-        <ListItem key={text} disablePadding sx={{ display: 'block' }}>
+      {Array2.map((item) => (
+        <ListItem key={item.path} disablePadding sx={{ display: 'block' }}>
           <ListItemButton
             sx={[
               {
@@ -168,10 +240,10 @@ const SideBar = ({open, handleDrawerClose}) => {
                     },
               ]}
             >
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {item.icon}
             </ListItemIcon>
             <ListItemText
-              primary={text}
+              primary={item.text}
               sx={[
                 open
                   ? {
@@ -186,6 +258,64 @@ const SideBar = ({open, handleDrawerClose}) => {
         </ListItem>
       ))}
     </List>
+
+
+    <Divider />
+
+
+    <List>
+      {Array3.map((item) => (
+        <ListItem key={item.path} disablePadding sx={{ display: 'block' }}>
+          <ListItemButton
+            sx={[
+              {
+                minHeight: 48,
+                px: 2.5,
+              },
+              open
+                ? {
+                    justifyContent: 'initial',
+                  }
+                : {
+                    justifyContent: 'center',
+                  },
+            ]}
+          >
+            <ListItemIcon
+              sx={[
+                {
+                  minWidth: 0,
+                  justifyContent: 'center',
+                },
+                open
+                  ? {
+                      mr: 3,
+                    }
+                  : {
+                      mr: 'auto',
+                    },
+              ]}
+            >
+              {item.icon}
+            </ListItemIcon>
+            <ListItemText
+              primary={item.text}
+              sx={[
+                open
+                  ? {
+                      opacity: 1,
+                    }
+                  : {
+                      opacity: 0,
+                    },
+              ]}
+            />
+          </ListItemButton>
+        </ListItem>
+      ))}
+    </List>
+
+
   </Drawer>
   )
 }
