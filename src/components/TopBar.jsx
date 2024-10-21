@@ -19,7 +19,6 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
-
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
@@ -80,6 +79,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
+
+
+
+
+
 
 const TopBar = ({ open, handleDrawerOpen, setMode }) => {
   const theme = useTheme();
@@ -155,6 +160,7 @@ const TopBar = ({ open, handleDrawerOpen, setMode }) => {
           <IconButton color="inherit">
             <SettingsOutlinedIcon />
           </IconButton>
+
 
           <IconButton color="inherit">
             <Person2OutlinedIcon />
