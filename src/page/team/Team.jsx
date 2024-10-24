@@ -94,16 +94,14 @@ const Team = () => {
   ];
 
   return (
-    <Box>
 
-      <Box sx={{ height: 600, mx: "auto" }}>
+      <Box sx={{ height: 600, width: "98%" , mx: "auto" }}>
         <DataGrid
           rows={rows}
           // @ts-ignore
           columns={columns}
         />
       </Box>
-    </Box>
   );
 };
 
