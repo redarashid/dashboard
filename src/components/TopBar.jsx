@@ -1,5 +1,3 @@
-
-
 import {
   Box,
   IconButton,
@@ -80,20 +78,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
-
-
-
-
-
 const TopBar = ({ open, handleDrawerOpen, setMode }) => {
   const theme = useTheme();
   return (
     <AppBar
       position="fixed"
       // @ts-ignore
-      open={open}
-    >
+      open={open}>
       <Toolbar>
         <IconButton
           color="inherit"
@@ -103,8 +94,7 @@ const TopBar = ({ open, handleDrawerOpen, setMode }) => {
           sx={{
             marginRight: 5,
             ...(open && { display: "none" }),
-          }}
-        >
+          }}>
           <MenuIcon />
         </IconButton>
 
@@ -132,8 +122,7 @@ const TopBar = ({ open, handleDrawerOpen, setMode }) => {
                   prevMode === "light" ? "dark" : "light"
                 );
               }}
-              color="inherit"
-            >
+              color="inherit">
               <LightModeOutlinedIcon />
             </IconButton>
           ) : (
@@ -147,8 +136,7 @@ const TopBar = ({ open, handleDrawerOpen, setMode }) => {
                   prevMode === "light" ? "dark" : "light"
                 );
               }}
-              color="inherit"
-            >
+              color="inherit">
               <DarkModeOutlinedIcon />
             </IconButton>
           )}
@@ -160,7 +148,6 @@ const TopBar = ({ open, handleDrawerOpen, setMode }) => {
           <IconButton color="inherit">
             <SettingsOutlinedIcon />
           </IconButton>
-
 
           <IconButton color="inherit">
             <Person2OutlinedIcon />
