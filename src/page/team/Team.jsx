@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { rows } from "./Data";
@@ -67,8 +65,7 @@ const Team = () => {
                   : access === "Manager"
                   ? theme.palette.secondary.dark
                   : "#3da58a",
-            }}
-          >
+            }}>
             {access === "Admin" && (
               <AdminPanelSettingsOutlined
                 sx={{ color: "#fff" }}
@@ -94,14 +91,13 @@ const Team = () => {
   ];
 
   return (
-
-      <Box sx={{ height: 600, width: "98%" , mx: "auto" }}>
-        <DataGrid
-          rows={rows}
-          // @ts-ignore
-          columns={columns}
-        />
-      </Box>
+    <Box sx={{ height: 600, width: "98%", mx: "auto" }}>
+      <DataGrid
+        rows={rows}
+        // @ts-ignore
+        columns={columns}
+      />
+    </Box>
   );
 };
 
