@@ -16,7 +16,7 @@ import Contacts from './page/contacts/Contacts';
 import Bar from './page/bar/Bar';
 import Calendar from './page/calendar/Calendar';
 import Faq from './page/faq/Faq';
-import Form from 'page/form/Form';
+import Form from './page/form/Form';
 import Geography from './page/geography/Geography';
 import Invoices from './page/invoices/Invoices';
 import Line from './page/line/Line';
