@@ -114,7 +114,7 @@ const data = [
   ];
 
 
-const Chart = () => {
+const ChartComponent  = () => {
 
     const theme = useTheme();
   return (
@@ -336,7 +336,7 @@ const Chart = () => {
   )
 }
 
-export default Chart
+export default ChartComponent 
 
 
 
