@@ -1,20 +1,8 @@
 import React from "react";
 import Chart from "./ChartComponent";
 
-
-
-
 const Bar = () => {
-
-    return (
-      <Chart />
-  );
+  return <Chart />;
 };
 
 export default Bar;
-
-
-
-
-
-
