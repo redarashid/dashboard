@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import ChartLine from "./ChartLine";
 
 const Line = () => {
-  return (
-    <div>
-        Line Page
-    </div>
-  )
-}
+  return <ChartLine />;
+};
 
-export default Line
+export default Line;
