@@ -127,7 +127,7 @@ const Geography = () => {
         }}
         features={geo.features}
         projectionScale={130}
-        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        margin={{ top: 20, right: 0, bottom: 0, left: 0 }}
         colors="RdBu"
         domain={[0, 1000000]}
         unknownColor="#666666"
@@ -145,7 +145,7 @@ const Geography = () => {
             direction: "column",
             justify: true,
             translateX: 20,
-            translateY: -100,
+            translateY: -40,
             itemsSpacing: 0,
             itemWidth: 94,
             itemHeight: 18,
