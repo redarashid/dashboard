@@ -4,60 +4,6 @@ import { ResponsiveLine } from "@nivo/line";
 
 const data = [
   {
-    id: "japan",
-    color: "hsl(154, 70%, 50%)",
-    data: [
-      {
-        x: "plane",
-        y: 72,
-      },
-      {
-        x: "helicopter",
-        y: 95,
-      },
-      {
-        x: "boat",
-        y: 51,
-      },
-      {
-        x: "train",
-        y: 288,
-      },
-      {
-        x: "subway",
-        y: 209,
-      },
-      {
-        x: "bus",
-        y: 190,
-      },
-      {
-        x: "car",
-        y: 242,
-      },
-      {
-        x: "moto",
-        y: 178,
-      },
-      {
-        x: "bicycle",
-        y: 253,
-      },
-      {
-        x: "horse",
-        y: 260,
-      },
-      {
-        x: "skateboard",
-        y: 114,
-      },
-      {
-        x: "others",
-        y: 5,
-      },
-    ],
-  },
-  {
     id: "france",
     color: "hsl(69, 70%, 50%)",
     data: [
@@ -282,6 +228,7 @@ const ChartLine = () => {
     <Box sx={{ height: "75vh" }}>
       <ResponsiveLine
         data={data}
+        curve="catmullRom"
         theme={{
           text: {
             fontSize: 11,
@@ -320,7 +267,7 @@ const ChartLine = () => {
           grid: {
             line: {
               stroke: "#dddddd",
-              strokeWidth: 1,
+              strokeWidth: 0,
             },
           },
           legends: {
