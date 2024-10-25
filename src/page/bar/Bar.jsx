@@ -1,15 +1,20 @@
 import React from "react";
-import { Box } from "@mui/material";
-import ChartBar from "./chartBar"
+import Chart from "./Chart";
+
+
 
 
 const Bar = () => {
-  // const theme = useTheme();
-  return (
-    <Box>
-      <ChartBar />
-    </Box>
+
+    return (
+      <Chart />
   );
 };
 
 export default Bar;
+
+
+
+
+
+
