@@ -16,52 +16,36 @@ const Row1 = () => {
       gap={1}
       justifyContent={{ xs: "center", sm: "space-between" }}>
       <Card
-        icon={
-          <EmailIcon
-            sx={{ fontSize: "23px", color: theme.palette.secondary.main }}
-          />
-        }
+        icon={<EmailIcon
+          sx={{ fontSize: "23px", color: theme.palette.secondary.main }} />}
         title={"12,361"}
         subTitle={"Emails Sent"}
         increase={"+14%"}
-        data={data1}
-      />
+        data={data1} scheme={"nivo"}      />
 
       <Card
-        icon={
-          <PointOfSaleIcon
-            sx={{ fontSize: "23px", color: theme.palette.secondary.main }}
-          />
-        }
+        icon={<PointOfSaleIcon
+          sx={{ fontSize: "23px", color: theme.palette.secondary.main }} />}
         title={"431,225"}
         subTitle={"Sales obtained"}
         increase={"+21%"}
-        data={data2}
-      />
+        data={data2} scheme={"nivo"}      />
 
       <Card
-        icon={
-          <PersonAddIcon
-            sx={{ fontSize: "23px", color: theme.palette.secondary.main }}
-          />
-        }
+        icon={<PersonAddIcon
+          sx={{ fontSize: "23px", color: theme.palette.secondary.main }} />}
         title={"32,441"}
         subTitle={"New Clients"}
         increase={"+5%"}
-        data={data3}
-      />
+        data={data3} scheme={"nivo"}      />
 
       <Card
-        icon={
-          <TrafficIcon
-            sx={{ fontSize: "23px", color: theme.palette.secondary.main }}
-          />
-        }
+        icon={<TrafficIcon
+          sx={{ fontSize: "23px", color: theme.palette.secondary.main }} />}
         title={"1,325,134"}
         subTitle={"TrafficIcon"}
         increase={"+43%"}
-        data={data4}
-      />
+        data={data4} scheme={"nivo"}      />
     </Stack>
   );
 };
