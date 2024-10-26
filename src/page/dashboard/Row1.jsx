@@ -1,22 +1,18 @@
-import { Paper, Stack, Typography } from '@mui/material'
-import React from 'react'
+import {Stack} from "@mui/material";
+import React from "react";
+import Card from "./Card";
 
 const Row1 = () => {
   return (
-    <Stack direction={"row"} sx={{display: "flex"}}>
-        <Paper sx={{minWidth: "333px"}}>
-            
-            <Stack >
-                icon
-                <Typography>12,361</Typography>
-                <Typography>Emails Sent</Typography>
-            </Stack>
+    <Stack direction={"row"} flexWrap={"wrap"} gap={1} justifyContent={{xs: "center", sm: "space-between"}}>
 
-            <Stack></Stack>
-
-        </Paper>
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      
     </Stack>
-  )
-}
+  );
+};
 
-export default Row1
+export default Row1;
