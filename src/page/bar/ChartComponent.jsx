@@ -111,10 +111,10 @@ const data = [
   },
 ];
 
-const ChartComponent = () => {
+const ChartComponent = ({isDashbord = false}) => {
   const theme = useTheme();
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashbord ? "300px" : "75vh" }}>
       <ResponsiveBar
         data={data}
         keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
@@ -278,7 +278,7 @@ const ChartComponent = () => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "country",
+          legend: isDashbord ? null : "country",
           legendPosition: "middle",
           legendOffset: 32,
           truncateTickAt: 0,
@@ -287,7 +287,7 @@ const ChartComponent = () => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Food",
+          legend: isDashbord ? null : "Food",
           legendPosition: "middle",
           legendOffset: -50,
           truncateTickAt: 0,
