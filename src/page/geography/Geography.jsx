@@ -4,14 +4,14 @@ import { ResponsiveChoropleth } from "@nivo/geo";
 import { geo } from "./world_countries";
 import { data } from "./Data";
 
-const Geography = () => {
+const Geography = ({ isDashbord = false }) => {
   const theme = useTheme();
 
   return (
     <Box
       sx={{
-        height: "75vh",
-        border: `1px solid ${theme.palette.text.primary}`,
+        height: isDashbord ? "350px" : "75vh",
+        border: isDashbord ? null : `1px solid ${theme.palette.text.primary}`,
         borderRadius: "3px",
       }}>
       <ResponsiveChoropleth
@@ -126,7 +126,7 @@ const Geography = () => {
           },
         }}
         features={geo.features}
-        projectionScale={130}
+        projectionScale={isDashbord ? 70 : 130}
         margin={{ top: 20, right: 0, bottom: 0, left: 0 }}
         colors="RdBu"
         domain={[0, 1000000]}
@@ -139,31 +139,35 @@ const Geography = () => {
         graticuleLineColor="#dddddd"
         borderWidth={0.5}
         borderColor="#152538"
-        legends={[
-          {
-            anchor: "bottom-left",
-            direction: "column",
-            justify: true,
-            translateX: 20,
-            translateY: -40,
-            itemsSpacing: 0,
-            itemWidth: 94,
-            itemHeight: 18,
-            itemDirection: "left-to-right",
-            itemTextColor: theme.palette.text.primary,
-            itemOpacity: 0.85,
-            symbolSize: 18,
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemTextColor: "#000000",
-                  itemOpacity: 1,
+        legends={
+          isDashbord
+            ? []
+            : [
+                {
+                  anchor: "bottom-left",
+                  direction: "column",
+                  justify: true,
+                  translateX: 20,
+                  translateY: -40,
+                  itemsSpacing: 0,
+                  itemWidth: 94,
+                  itemHeight: 18,
+                  itemDirection: "left-to-right",
+                  itemTextColor: theme.palette.text.primary,
+                  itemOpacity: 0.85,
+                  symbolSize: 18,
+                  effects: [
+                    {
+                      on: "hover",
+                      style: {
+                        itemTextColor: "#000000",
+                        itemOpacity: 1,
+                      },
+                    },
+                  ],
                 },
-              },
-            ],
-          },
-        ]}
+              ]
+        }
       />
     </Box>
   );

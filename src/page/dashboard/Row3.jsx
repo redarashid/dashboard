@@ -1,5 +1,6 @@
 import { Paper, Stack, Typography, useTheme } from "@mui/material";
 import ChartComponent from "page/bar/ChartComponent";
+import Geography from "page/geography/Geography";
 import PieChart from "page/pie/PieChart";
 import React from "react";
 
@@ -36,6 +37,11 @@ const Row3 = () => {
         >Sales Quantity</Typography>
 
         <ChartComponent isDashbord = {true} />
+      </Paper>
+
+      <Paper sx={{ flexGrow: 1, minwidth: "400px", width: "33%" }}>
+
+        <Geography isDashbord = {true} />
       </Paper>
     </Stack>
   );
