@@ -1,7 +1,7 @@
 import React from "react";
 import { Paper, Stack, Typography } from "@mui/material";
 
-const Card = () => {
+const Card = ({icon, title, subTitle, chart, increase}) => {
   return (
     <Paper
       sx={{
@@ -11,16 +11,14 @@ const Card = () => {
         justifyContent: "space-between",
       }}>
       <Stack>
-        icon
-        <Typography sx={{ fontSize: "12px", pt: "5px" }}>12,361</Typography>
-        <Typography sx={{ fontSize: "13px", pt: "5px" }}>
-          Emails Sent
-        </Typography>
+        {icon}
+        <Typography sx={{ fontSize: "12px", pt: "5px" }}>{title}</Typography>
+        <Typography sx={{ fontSize: "13px", pt: "5px" }}>{subTitle}</Typography>
       </Stack>
 
       <Stack>
-        icon
-        <Typography>+14%</Typography>
+        {chart}
+        <Typography>{increase}</Typography>
       </Stack>
     </Paper>
   );
