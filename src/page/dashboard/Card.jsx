@@ -27,6 +27,7 @@ const Card = ({ icon, title, subTitle, increase, data, scheme }) => {
             margin={{ top: 10, right: 0, bottom: 10, left: 0 }}
             innerRadius={0.7}
             theme={{
+              // @ts-ignore
               textColor: theme.palette.text.primary,
               fontSize: 11,
               axis: {
