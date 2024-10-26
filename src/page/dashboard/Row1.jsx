@@ -22,8 +22,8 @@ const Row1 = () => {
         }
         title={"12,361"}
         subTitle={"Emails Sent"}
-        chart={""}
         increase={"+14%"}
+        data={undefined}
       />
 
       <Card
@@ -34,8 +34,8 @@ const Row1 = () => {
         }
         title={"431,225"}
         subTitle={"Sales obtained"}
-        chart={""}
         increase={"+21%"}
+        data={undefined}
       />
 
       <Card
@@ -46,8 +46,8 @@ const Row1 = () => {
         }
         title={"32,441"}
         subTitle={"New Clients"}
-        chart={""}
         increase={"+5%"}
+        data={undefined}
       />
 
       <Card
@@ -58,8 +58,8 @@ const Row1 = () => {
         }
         title={"1,325,134"}
         subTitle={"TrafficIcon"}
-        chart={""}
         increase={"+43%"}
+        data={undefined}
       />
     </Stack>
   );
