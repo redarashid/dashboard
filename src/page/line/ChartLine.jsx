@@ -221,11 +221,11 @@ const data = [
   },
 ];
 
-const ChartLine = () => {
+const ChartLine = ({isDashboard = false}) => {
   const theme = useTheme();
 
   return (
-    <Box sx={{ height: "75vh" }}>
+    <Box sx={{ height: isDashboard ? "280px" : "75vh" }}>
       <ResponsiveLine
         data={data}
         curve="catmullRom"
@@ -354,7 +354,7 @@ const ChartLine = () => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Transportation",
+          legend: isDashboard ? null : "Transportation",
           legendOffset: 45,
           legendPosition: "middle",
           truncateTickAt: 0,
@@ -363,7 +363,7 @@ const ChartLine = () => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: "Count",
+          legend: isDashboard ? null : "Count",
           legendOffset: -50,
           legendPosition: "middle",
           truncateTickAt: 0,
