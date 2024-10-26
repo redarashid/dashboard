@@ -5,6 +5,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import TrafficIcon from "@mui/icons-material/Traffic";
+import { data1, data2, data3, data4 } from "./data";
 
 const Row1 = () => {
   const theme = useTheme();
@@ -23,7 +24,7 @@ const Row1 = () => {
         title={"12,361"}
         subTitle={"Emails Sent"}
         increase={"+14%"}
-        data={undefined}
+        data={data1}
       />
 
       <Card
@@ -35,7 +36,7 @@ const Row1 = () => {
         title={"431,225"}
         subTitle={"Sales obtained"}
         increase={"+21%"}
-        data={undefined}
+        data={data2}
       />
 
       <Card
@@ -47,7 +48,7 @@ const Row1 = () => {
         title={"32,441"}
         subTitle={"New Clients"}
         increase={"+5%"}
-        data={undefined}
+        data={data3}
       />
 
       <Card
@@ -59,7 +60,7 @@ const Row1 = () => {
         title={"1,325,134"}
         subTitle={"TrafficIcon"}
         increase={"+43%"}
-        data={undefined}
+        data={data4}
       />
     </Stack>
   );
