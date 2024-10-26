@@ -57,7 +57,7 @@ const Row2 = () => {
           flexWrap: "wrap",
           maxHeight: 350,
           flexGrow: 1,
-          overflow: 'auto'
+          overflow: "auto",
         }}>
         <Paper>
           <Typography
