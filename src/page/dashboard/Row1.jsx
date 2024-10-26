@@ -29,7 +29,7 @@ const Row1 = () => {
         title={"431,225"}
         subTitle={"Sales obtained"}
         increase={"+21%"}
-        data={data2} scheme={"nivo"}      />
+        data={data2} scheme={"accent"}      />
 
       <Card
         icon={<PersonAddIcon
@@ -37,7 +37,7 @@ const Row1 = () => {
         title={"32,441"}
         subTitle={"New Clients"}
         increase={"+5%"}
-        data={data3} scheme={"nivo"}      />
+        data={data3} scheme={"paired"}      />
 
       <Card
         icon={<TrafficIcon
@@ -45,7 +45,7 @@ const Row1 = () => {
         title={"1,325,134"}
         subTitle={"TrafficIcon"}
         increase={"+43%"}
-        data={data4} scheme={"nivo"}      />
+        data={data4} scheme={"pastel1"}      />
     </Stack>
   );
 };

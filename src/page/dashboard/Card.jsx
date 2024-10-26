@@ -12,6 +12,7 @@ const Card = ({ icon, title, subTitle, increase, data, scheme }) => {
         p: 1.5,
         display: "flex",
         justifyContent: "space-between",
+        flexGrow: 1
       }}>
       <Stack>
         {icon}
@@ -19,8 +20,8 @@ const Card = ({ icon, title, subTitle, increase, data, scheme }) => {
         <Typography sx={{ fontSize: "13px", pt: "5px" }}>{subTitle}</Typography>
       </Stack>
 
-      <Stack>
-        <Box sx={{ height: "100px", width: "100px" }}>
+      <Stack alignItems={"center"}>
+        <Box sx={{ height: "80px", width: "80px" }}>
           <ResponsivePie
             data={data}
             margin={{ top: 10, right: 0, bottom: 10, left: 0 }}
