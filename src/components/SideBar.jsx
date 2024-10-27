@@ -165,7 +165,7 @@ const SideBar = ({ open, handleDrawerClose }) => {
 
       <List>
         {Array1.map((item) => (
-          <Tooltip title={open ? null : item.text}placement="left">
+          <Tooltip title={open ? null : item.text} placement="left">
             <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 onClick={() => {
@@ -229,52 +229,54 @@ const SideBar = ({ open, handleDrawerClose }) => {
       <List>
         {Array2.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
-            <ListItemButton
-              onClick={() => {
-                navigate(item.path);
-              }}
-              sx={[
-                {
-                  minHeight: 48,
-                  px: 2.5,
-                },
-                open
-                  ? {
-                      justifyContent: "initial",
-                    }
-                  : {
-                      justifyContent: "center",
-                    },
-              ]}>
-              <ListItemIcon
+            <Tooltip title={open ? null : item.text} placement="left">
+              <ListItemButton
+                onClick={() => {
+                  navigate(item.path);
+                }}
                 sx={[
                   {
-                    minWidth: 0,
-                    justifyContent: "center",
+                    minHeight: 48,
+                    px: 2.5,
                   },
                   open
                     ? {
-                        mr: 3,
+                        justifyContent: "initial",
                       }
                     : {
-                        mr: "auto",
+                        justifyContent: "center",
                       },
                 ]}>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText
-                primary={item.text}
-                sx={[
-                  open
-                    ? {
-                        opacity: 1,
-                      }
-                    : {
-                        opacity: 0,
-                      },
-                ]}
-              />
-            </ListItemButton>
+                <ListItemIcon
+                  sx={[
+                    {
+                      minWidth: 0,
+                      justifyContent: "center",
+                    },
+                    open
+                      ? {
+                          mr: 3,
+                        }
+                      : {
+                          mr: "auto",
+                        },
+                  ]}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText
+                  primary={item.text}
+                  sx={[
+                    open
+                      ? {
+                          opacity: 1,
+                        }
+                      : {
+                          opacity: 0,
+                        },
+                  ]}
+                />
+              </ListItemButton>
+            </Tooltip>
           </ListItem>
         ))}
       </List>
@@ -284,52 +286,54 @@ const SideBar = ({ open, handleDrawerClose }) => {
       <List>
         {Array3.map((item) => (
           <ListItem key={item.path} disablePadding sx={{ display: "block" }}>
-            <ListItemButton
-              onClick={() => {
-                navigate(item.path);
-              }}
-              sx={[
-                {
-                  minHeight: 48,
-                  px: 2.5,
-                },
-                open
-                  ? {
-                      justifyContent: "initial",
-                    }
-                  : {
-                      justifyContent: "center",
-                    },
-              ]}>
-              <ListItemIcon
+            <Tooltip title={open ? null : item.text} placement="left">
+              <ListItemButton
+                onClick={() => {
+                  navigate(item.path);
+                }}
                 sx={[
                   {
-                    minWidth: 0,
-                    justifyContent: "center",
+                    minHeight: 48,
+                    px: 2.5,
                   },
                   open
                     ? {
-                        mr: 3,
+                        justifyContent: "initial",
                       }
                     : {
-                        mr: "auto",
+                        justifyContent: "center",
                       },
                 ]}>
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText
-                primary={item.text}
-                sx={[
-                  open
-                    ? {
-                        opacity: 1,
-                      }
-                    : {
-                        opacity: 0,
-                      },
-                ]}
-              />
-            </ListItemButton>
+                <ListItemIcon
+                  sx={[
+                    {
+                      minWidth: 0,
+                      justifyContent: "center",
+                    },
+                    open
+                      ? {
+                          mr: 3,
+                        }
+                      : {
+                          mr: "auto",
+                        },
+                  ]}>
+                  {item.icon}
+                </ListItemIcon>
+                <ListItemText
+                  primary={item.text}
+                  sx={[
+                    open
+                      ? {
+                          opacity: 1,
+                        }
+                      : {
+                          opacity: 0,
+                        },
+                  ]}
+                />
+              </ListItemButton>
+            </Tooltip>
           </ListItem>
         ))}
       </List>
