@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
+import Header from "components/Header";
 
 const data = [
   {
@@ -115,6 +116,8 @@ const ChartComponent = ({isDashbord = false}) => {
   const theme = useTheme();
   return (
     <Box sx={{ height: isDashbord ? "300px" : "75vh" }}>
+
+      <Header title={"Bar Chart"} subTitle={"The minimum wage in Germany, France and Spain (EUR/month)"} />
       <ResponsiveBar
         data={data}
         keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
