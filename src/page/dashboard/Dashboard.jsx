@@ -18,7 +18,7 @@ const Dashboard = () => {
         </Button>
       </Box>
 
-      <Box >
+      <Box>
         <Row1 />
         <Row2 />
         <Row3 />

@@ -15,12 +15,11 @@ const Row2 = () => {
   const theme = useTheme();
   return (
     <Stack
-      alignItems={"center"}
       direction={"row"}
       flexWrap={"wrap"}
-      gap={1}
-      mt={1.5}
-      flexGrow={"wrap"}>
+      gap={1.2}
+      mt={1.3}
+      >
       <Paper sx={{ maxWidth: 900, flexGrow: 1 }}>
         <Stack
           direction={"row"}

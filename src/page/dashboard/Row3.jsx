@@ -7,14 +7,19 @@ import React from "react";
 const Row3 = () => {
   const theme = useTheme();
   return (
-    <Stack direction={"row"} gap={1.5} flexWrap={"wrap"} mt={1.4}>
+    <Stack
+      direction={"row"}
+      gap={1.5}
+      flexWrap={"wrap"}
+      mt={1.4}
+      >
+
       <Paper sx={{ flexGrow: 1, minwidth: "400px", width: "28%" }}>
         <Typography
           color={theme.palette.secondary.main}
           fontWeight={"600"}
           variant="h6"
-          sx={{ padding: "30px 30px 0 30px" }}
-          >
+          sx={{ padding: "30px 30px 0 30px" }}>
           Campaign
         </Typography>
 
@@ -33,15 +38,15 @@ const Row3 = () => {
           color={theme.palette.secondary.main}
           fontWeight={"600"}
           variant="h6"
-          sx={{ padding: "30px 30px 0 30px" }}
-        >Sales Quantity</Typography>
+          sx={{ padding: "30px 30px 0 30px" }}>
+          Sales Quantity
+        </Typography>
 
-        <ChartComponent isDashbord = {true} />
+        <ChartComponent isDashbord={true} />
       </Paper>
 
       <Paper sx={{ flexGrow: 1, minwidth: "400px", width: "33%" }}>
-
-        <Geography isDashbord = {true} />
+        <Geography isDashbord={true} />
       </Paper>
     </Stack>
   );
