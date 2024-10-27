@@ -164,7 +164,7 @@ const PieChart = ({ isDashbord = false }) => {
         borderColor={{
           from: "color",
           modifiers: [["darker", 0.2]],
-        }}
+        }}             
         arcLinkLabelsSkipAngle={10}
         arcLinkLabelsTextColor={theme.palette.text.primary}
         arcLinkLabelsThickness={2}

@@ -12,7 +12,6 @@ import Header from "components/Header";
 
 const Team = () => {
   const theme = useTheme();
-  
 
   // field ==> Reqird
   const columns = [
@@ -68,7 +67,6 @@ const Team = () => {
                   ? theme.palette.secondary.dark
                   : "#3da58a",
             }}>
-            
             {access === "Admin" && (
               <AdminPanelSettingsOutlined
                 sx={{ color: "#fff" }}
@@ -94,13 +92,15 @@ const Team = () => {
   ];
 
   return (
-    <Box sx={{ height: 600, width: "98%", mx: "auto" }}>
+    <Box>
       <Header title={"TEAM"} subTitle={"Managing the Team Members"} />
-      <DataGrid
-        rows={rows}
-        // @ts-ignore
-        columns={columns}
-      />
+      <Box sx={{ height: 600, mx: "auto" }}>
+        <DataGrid
+          rows={rows}
+          // @ts-ignore
+          columns={columns}
+        />
+      </Box>
     </Box>
   );
 };
