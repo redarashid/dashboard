@@ -21,6 +21,7 @@ import Geography from "./page/geography/Geography";
 import Invoices from "./page/invoices/Invoices";
 import Line from "./page/line/Line";
 import Pie from "./page/pie/Pie";
+import NotFound from "./page/notFound/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
       <Route path="invoices" element={<Invoices />} />
       <Route path="line" element={<Line />} />
       <Route path="pie" element={<Pie />} />
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
