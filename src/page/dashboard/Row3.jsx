@@ -8,13 +8,13 @@ const Row3 = () => {
   const theme = useTheme();
   return (
     <Stack
-      direction={"row"}
+      direction={{ xs: "column", md: "row" }}
       gap={1.5}
       flexWrap={"wrap"}
       mt={1.4}
       >
 
-      <Paper sx={{ flexGrow: 1, minwidth: "400px", width: "28%" }}>
+      <Paper sx={{ flexGrow: 1, minwidth: "400px", width: { xs: "100%", md: "28%" } }}>
         <Typography
           color={theme.palette.secondary.main}
           fontWeight={"600"}
@@ -33,7 +33,7 @@ const Row3 = () => {
         </Typography>
       </Paper>
 
-      <Paper sx={{ flexGrow: 1, minwidth: "400px", width: "33%" }}>
+      <Paper sx={{ flexGrow: 1, minwidth: "400px", width: { xs: "100%", md: "33%" } }}>
         <Typography
           color={theme.palette.secondary.main}
           fontWeight={"600"}
@@ -45,7 +45,7 @@ const Row3 = () => {
         <ChartComponent isDashbord={true} />
       </Paper>
 
-      <Paper sx={{ flexGrow: 1, minwidth: "400px", width: "33%" }}>
+      <Paper sx={{ flexGrow: 1, minwidth: "400px", width: { xs: "100%", md: "33%" } }}>
         <Geo isDashbord={true} />
       </Paper>
     </Stack>
