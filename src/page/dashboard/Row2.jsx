@@ -19,7 +19,7 @@ const Row2 = () => {
       direction={"row"}
       flexWrap={"wrap"}
       gap={1}
-      mt={3}
+      mt={1.5}
       flexGrow={"wrap"}>
       <Paper sx={{ maxWidth: 900, flexGrow: 1 }}>
         <Stack

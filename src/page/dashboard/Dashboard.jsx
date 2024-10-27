@@ -8,7 +8,7 @@ import { DownloadOutlined } from "@mui/icons-material";
 const Dashboard = () => {
   return (
     <div>
-      <Box sx={{ textAlign: "right", mb: "1.3" }}>
+      <Box sx={{ textAlign: "right", mb: 1.3 }}>
         <Button
           sx={{ padding: "6px 8px", textTransform: "capitalize" }}
           variant="contained"
