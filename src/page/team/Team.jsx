@@ -24,31 +24,32 @@ const Team = () => {
     },
     {
       field: "name",
-      headerName: "name",
+      headerName: "Name",
       align: "center",
       headerAlign: "center",
     },
     {
       field: "email",
-      headerName: "email",
+      headerName: "Email",
       flex: 1,
       align: "center",
       headerAlign: "center",
     },
-    { field: "age", headerName: "age", align: "center", headerAlign: "center" },
+    { field: "age", headerName: "Age", align: "center", headerAlign: "center" },
     {
       field: "phone",
-      headerName: "phone",
+      headerName: "Phone",
       flex: 1,
       align: "center",
       headerAlign: "center",
     },
     {
       field: "access",
-      headerName: "access",
+      headerName: "Access",
       flex: 1,
       align: "center",
       headerAlign: "center",
+      display: "flex",
       renderCell: ({ row: { access } }) => {
         return (
           <Box
@@ -106,3 +107,4 @@ const Team = () => {
 };
 
 export default Team;
+
